@@ -8,7 +8,13 @@ st.set_page_config(
 
 st.title("Halo Semuanya !👋")
 
-st.write('Kamu Bisa menemukan Source Code Project ini')
+tab1, tab2, tab3 = st.tabs(["Okhi Sahrul Barkah", "Farid Ghozali", "Afirza Lucky Pradana"])
 
-link = '[Di GitHub](https://github.com/khikisb/Prediksi-Kesadaran-Pelecehan-Seksual-Anak)'
-st.markdown(link, unsafe_allow_html=True)
+with tab1:
+   st.write("Belum Ada Foto")
+
+with tab2:
+   st.write("Belum Ada Foto")
+    
+with tab3:
+   st.write("Belum Ada Foto")
