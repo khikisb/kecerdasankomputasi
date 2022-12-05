@@ -16,7 +16,7 @@ with tab1:
    st.write("Belum Ada Foto")
 
 with tab2:
-   st.write("Belum Ada Foto")
+   st.image("farid.png")
     
 with tab3:
    st.write("Belum Ada Foto")
