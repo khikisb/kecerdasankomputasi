@@ -13,10 +13,10 @@ st.title("Yang Terdiri dari 3 Mahasiswa")
 tab1, tab2, tab3 = st.tabs(["Okhi Sahrul Barkah", "Farid Ghozali", "Afirza Lucky Pradana"])
 
 with tab1:
-   st.write("Belum Ada Foto")
+   st.image("sahrul.png")
 
 with tab2:
    st.image("farid.png")
     
 with tab3:
-   st.write("Belum Ada Foto")
+   st.image("firza.png")
