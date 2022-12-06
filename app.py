@@ -66,7 +66,7 @@ with tab4:
         #Reshaping:
         X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
         
-        st.title("Pre Processing Fitur Usia ddengan MinMaxScaler")
+        st.title("Pre Processing Fitur Usia dengan MinMaxScaler")
         databaruu = [df1]
         
         # Data Lama
@@ -82,7 +82,7 @@ with tab4:
         databaru2
         
         dataset_total = pd.concat((databaru2), axis=0)
-        inputs = dataset_total[len(dataset_total)-len(df1) - 1:].values.reshape(-1,1)
+        inputs = dataset_total[len(dataset_total)-len(df1) - timesteps:].values.reshape(-1,1)
         inputs = scaler.transform(inputs) #minmax scaler
         inputs
 
