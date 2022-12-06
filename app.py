@@ -35,8 +35,9 @@ with tab2:
     train_scaled
     
     st.title("Grafik dari MinMaxScaler Fitur Usia")
-    st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.pyplot(train_scaled)
+    fig, ax = plt.subplots()
+    # ...
+    st.pyplot(fig)
     
 with tab3:
    st.image("firza.png")
