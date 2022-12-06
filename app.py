@@ -144,3 +144,16 @@ with tab4:
         
         st.title("Jumlah Pasien Yang Di Prediksi")
         predicted_umur.shape
+
+        st.title("Umur Pasien Yang Di Prediksi")
+        vector = np.vectorize(np.int_)
+        y = np.array([predicted_umur])
+        x = vector(y)
+        
+        st.title("Rata - rata umur pasien") 
+        hasil = 0
+        for i in predicted_umur:
+            temp = i[0]
+            hasil += temp
+
+        print("Rata rata Umur Pasien : ", int(hasil/len(predicted_umur)), "Tahun")
