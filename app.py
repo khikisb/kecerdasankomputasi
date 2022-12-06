@@ -3,6 +3,19 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
+import zipfile
+import tempfile
+
+stream = st.file_uploader('TF.Keras model file (modeltf.zip)', type='zip')
+if stream is not None:
+  myzipfile = zipfile.ZipFile(stream)
+  with tempfile.TemporaryDirectory() as tmp_dir:
+    myzipfile.extractall(tmp_dir)
+    root_folder = myzipfile.namelist()[0] # e.g. "model.h5py"
+    model_dir = os.path.join(tmp_dir, root_folder)
+    #st.info(f'trying to load model from tmp dir {model_dir}...')
+    model = tf.keras.models.load_model(model_dir)
+
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
     page_icon="👋",
