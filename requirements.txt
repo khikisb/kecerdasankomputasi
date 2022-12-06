@@ -5,4 +5,4 @@ Keras==2.4.3
 pandas==1.2.0
 xlrd==1.2.0 
 scikit-learn
-TensorFlow==2.2
+tensorflow==2.2
