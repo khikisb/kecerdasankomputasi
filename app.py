@@ -3,6 +3,12 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
+#import libraries and packages:
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import SimpleRNN
+from keras.layers import Dropout
+
 #Initialize RNN:
 regressor = Sequential()
 #Adding the first RNN layer and some Dropout regularization
