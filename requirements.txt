@@ -1,3 +1,4 @@
+Python==3.6.4
 numpy==1.20.1
 streamlit==1.11.0
 matplotlib==3.4.1
@@ -6,4 +7,3 @@ xlrd==1.2.0
 scikit-learn
 Tensorflow==1.13.1
 keras==2.1.5 
-Python==3.6.4
