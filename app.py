@@ -51,3 +51,18 @@ with tab4:
         df1 = df_selected_team1.astype(str)
     
         st.table(df1)
+        
+    st.title("Pre Processing Fitur Usia ddengan MinMaxScaler")
+    databaruu = [df1]
+
+    temp=[]
+    for i in df['Usia']:
+        temp.append(i)
+        
+    temp=[]
+    for i in df1['Usia']:
+        temp.append(i)
+    
+    databaru2 = [temp]
+    databaru2
+
