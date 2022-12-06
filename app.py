@@ -45,13 +45,16 @@ with tab3:
    st.image("firza.png")
 
 with tab4:
+    df_selected_team = pd.read_excel("datadiabetes.xlsx")
+    df = df_selected_team.astype(str)
+    
     uploaded_file = st.file_uploader("Masukkan Data Pasien")
     if uploaded_file is not None:
         #read csv
         df_selected_team1 = pd.read_excel(uploaded_file)
-        df1 = df_selected_team1.astype(str)
+        data_baru = df_selected_team1.astype(str)
     
-        st.table(df1)
+        st.table(data_baru)
         
         X_train = []
         y_train = []
@@ -68,7 +71,7 @@ with tab4:
         
         st.title("Pre Processing Fitur Usia dengan MinMaxScaler")
         
-        databaruu = [df1]
+        databaruu = [data_baru]
         
         # databaruu2 = {'usiaaa': df['Usia']}
         temp=[]
@@ -78,12 +81,10 @@ with tab4:
         databaruu2 = [temp]
         # print(databaruu2)
         
-        data1 = pd.DataFrame(databaruu)
-        data1
-        data2 = pd.DataFrame(databaru2)
-        data2
+        df1 = pd.DataFrame(databaruu)
+        df2 = pd.DataFrame(databaruu2)
         
-        dataset_total = pd.concat((data1, data2), axis=0)
-        inputs = dataset_total[len(dataset_total)-len(data2) - timesteps:].values.reshape(-1,1)
+        dataset_total = pd.concat((df1, df2), axis=0)
+        inputs = dataset_total[len(dataset_total)-len(df2) - timesteps:].values.reshape(-1,1)
         inputs = scaler.transform(inputs) #minmax scaler
         inputs
