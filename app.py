@@ -3,16 +3,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-from keras import backend as K
-
-@st.cache(allow_output_mutation=True)
-def load_model():
-    model = load_model("modeltf.hdf5")
-    model._make_predict_function()
-    model.summary()  # included to make it visible when model is reloaded
-    session = K.get_session()
-    return model, session
-
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
     page_icon="👋",
@@ -119,3 +109,5 @@ with tab4:
         X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
         predicted_umur = regressor.predict(X_test)
         predicted_umur = scaler.inverse_transform(predicted_umur)
+        
+        
