@@ -150,6 +150,7 @@ with tab4:
         vector = np.vectorize(np.int_)
         y = np.array([predicted_umur])
         x = vector(y)
+        x
         
         st.title("Rata - rata umur pasien") 
         hasil = 0
