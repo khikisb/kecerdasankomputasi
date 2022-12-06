@@ -67,19 +67,16 @@ with tab4:
         X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
         
         st.title("Pre Processing Fitur Usia dengan MinMaxScaler")
+        
         databaruu = [df1]
         
-        # Data Lama
+        # databaruu2 = {'usiaaa': df['Usia']}
         temp=[]
-        for h in df['Usia']:
-            temp.append(h)
-            
-        # Data Baru    
-        for h in df1['Usia']:
-            temp.append(h)  
-            
-        databaru2 = [temp]
-        databaru2
+        for i in df['Usia']:
+            temp.append(i)
+
+        databaruu2 = [temp]
+        # print(databaruu2)
         
         df1 = pd.DataFrame(databaruu)
         df2 = pd.DataFrame(databaru2)
