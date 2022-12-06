@@ -45,11 +45,18 @@ with tab3:
    st.image("firza.png")
 
 with tab4:
-    df_selected_team = pd.read_excel("datadiabetes.xlsx")
-    df = df_selected_team.astype(str)
-    
     uploaded_file = st.file_uploader("Masukkan Data Pasien")
     if uploaded_file is not None:
+        df_selected_team = pd.read_excel("datadiabetes.xlsx")
+        df = df_selected_team.astype(str)
+        
+        train = df.loc[:, ['Usia']].values 
+        
+        from sklearn.preprocessing import MinMaxScaler
+        scaler = MinMaxScaler(feature_range = (0, 1))
+        train_scaled = scaler.fit_transform(train)
+        
+        
         #read csv
         df_selected_team1 = pd.read_excel(uploaded_file)
         data_baru = df_selected_team1.astype(str)
