@@ -52,17 +52,17 @@ with tab4:
     
         st.table(df1)
         
-    st.title("Pre Processing Fitur Usia ddengan MinMaxScaler")
-    databaruu = [df1]
+        st.title("Pre Processing Fitur Usia ddengan MinMaxScaler")
+        databaruu = [df1]
 
-    temp=[]
-    for h in df['Usia']:
-        temp.append(h)
+        temp=[]
+        for h in df['Usia']:
+            temp.append(h)
         
-    temp=[]
-    for i in df1['Usia']:
-        temp.append(i)
+        temp1=[]
+        for i in df1['Usia']:
+            temp.append(i)
     
-    databaru2 = [temp]
-    databaru2
+        databaru2 = [temp,temp1]
+        databaru2
 
