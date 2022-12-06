@@ -1,6 +1,7 @@
 import pandas as pd
 import pickle
 import streamlit as st
+import matplotlib.pyplot as plt
 
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien Diabetes",
@@ -32,6 +33,9 @@ with tab2:
     scaler = MinMaxScaler(feature_range = (0, 1))
     train_scaled = scaler.fit_transform(train)
     train_scaled
+    
+    st.title("Grafik dari MinMaxScaler Fitur Usia")
+    plt.plot(train_scaled)
     
 with tab3:
    st.image("firza.png")
