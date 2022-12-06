@@ -3,6 +3,9 @@ import pickle
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+from keras.models import load_model
+import os
+model = load_model("modeltf.hdf5")
 
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
@@ -114,7 +117,7 @@ with tab4:
         databaru2
         
         dataset_total = pd.concat((df, df1), axis=0)
-        inputs = dataset_total[len(dataset_total)-len(df1) - 1:].values.reshape(-1,1)
+        inputs = dataset_total[len(dataset_total)-len(df1) - timesteps:].values.reshape(-1,1)
         inputs = scaler.transform(inputs) #minmax scaler
         inputs
 
