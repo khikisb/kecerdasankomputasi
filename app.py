@@ -2,6 +2,12 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+#import libraries and packages:
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import SimpleRNN
+from keras.layers import Dropout
+
 
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
