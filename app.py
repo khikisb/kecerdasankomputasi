@@ -56,8 +56,8 @@ with tab4:
     databaruu = [df1]
 
     temp=[]
-    for i in df['Usia']:
-        temp.append(i)
+    for h in df['Usia']:
+        temp.append(h)
         
     temp=[]
     for i in df1['Usia']:
