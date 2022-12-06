@@ -77,7 +77,7 @@ with tab4:
         for i in df1['Usia']:
             temp.append(i)
     
-        databaru2 = [temp,temp1]
+        databaru2 = [temp]
         databaru2
         
         dataset_total = pd.concat((databaru2), axis=0)
