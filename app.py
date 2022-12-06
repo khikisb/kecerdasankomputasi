@@ -1,11 +1,17 @@
 import pandas as pd
-import pickle
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-# load the model from disk
-model = pickle.load(open('modeltf.hdf5', 'rb'))
+from keras import backend as K
+
+@st.cache(allow_output_mutation=True)
+def load_model():
+    model = load_model("modeltf.hdf5")
+    model._make_predict_function()
+    model.summary()  # included to make it visible when model is reloaded
+    session = K.get_session()
+    return model, session
 
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
