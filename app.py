@@ -105,7 +105,7 @@ with tab4:
         df_selected_team1 = pd.read_excel(uploaded_file)
         data_baru = df_selected_team1.astype(str)
     
-        st.table(data_baru)
+        st.table(data_baru, engine='openpyxl')
         
         st.title("Pre Processing Fitur Usia dengan MinMaxScaler")
              
