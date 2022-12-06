@@ -3,39 +3,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-#import libraries and packages:
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.layers import SimpleRNN
-from keras.layers import Dropout
-
-#Initialize RNN:
-regressor = Sequential()
-#Adding the first RNN layer and some Dropout regularization
-regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True, input_shape= (X_train.shape[1],1)))
-regressor.add(Dropout(0.2))
-
-#Adding the second RNN layer and some Dropout regularization
-regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True))
-regressor.add(Dropout(0.2))
-
-#Adding the third RNN layer and some Dropout regularization
-regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True))
-regressor.add(Dropout(0.2))
-
-#Adding the fourth RNN layer and some Dropout regularization
-regressor.add(SimpleRNN(units = 10))
-regressor.add(Dropout(0.2))
-
-#Adding the output layer
-regressor.add(Dense(units = 1))
-
-#Compile the RNN
-regressor.compile(optimizer='adam', loss='mean_squared_error')
-
-#Fitting the RNN to the Training set
-regressor.fit(X_train, y_train, epochs=100, batch_size=32)
-
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
     page_icon="👋",
@@ -101,6 +68,38 @@ with tab4:
         #Reshaping:
         X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
         
+        #import libraries and packages:
+        from keras.models import Sequential
+        from keras.layers import Dense
+        from keras.layers import SimpleRNN
+        from keras.layers import Dropout
+
+        #Initialize RNN:
+        regressor = Sequential()
+        #Adding the first RNN layer and some Dropout regularization
+        regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True, input_shape= (X_train.shape[1],1)))
+        regressor.add(Dropout(0.2))
+
+        #Adding the second RNN layer and some Dropout regularization
+        regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True))
+        regressor.add(Dropout(0.2))
+
+        #Adding the third RNN layer and some Dropout regularization
+        regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True))
+        regressor.add(Dropout(0.2))
+
+        #Adding the fourth RNN layer and some Dropout regularization
+        regressor.add(SimpleRNN(units = 10))
+        regressor.add(Dropout(0.2))
+
+        #Adding the output layer
+        regressor.add(Dense(units = 1))
+
+        #Compile the RNN
+        regressor.compile(optimizer='adam', loss='mean_squared_error')
+
+        #Fitting the RNN to the Training set
+        regressor.fit(X_train, y_train, epochs=100, batch_size=32)
         
         #read csv Data 2
         df_selected_team1 = pd.read_excel(uploaded_file)
