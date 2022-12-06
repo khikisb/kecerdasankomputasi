@@ -77,21 +77,25 @@ with tab4:
         st.table(data_baru)
         
         st.title("Pre Processing Fitur Usia dengan MinMaxScaler")
-        
-        databaruu = [data_baru]
-        
-        # databaruu2 = {'usiaaa': df['Usia']}
+             
+        # Data 1    
         temp=[]
         for i in df['Usia']:
             temp.append(i)
-
+        
+        # Data 2
+        temp1 = []
+        for j in data_baru['Usia']:
+            temp1.append(j)
+        
+        databaruu = [temp1]
         databaruu2 = [temp]
         # print(databaruu2)
-        databaruu
 
+        df1 = pd.DataFrame(databaruu)        
         df2 = pd.DataFrame(databaruu2)
         
-        dataset_total = pd.concat((databaruu, df2), axis=0)
+        dataset_total = pd.concat((df1, df2), axis=0)
         inputs = dataset_total[len(dataset_total)-len(df2) - timesteps:].values.reshape(-1,1)
         inputs = scaler.transform(inputs) #minmax scaler
         inputs
