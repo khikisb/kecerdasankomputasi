@@ -17,13 +17,10 @@ st.title("Prediksi Jumlah Pasien Diabetes Di RSUD Syarifah Ambami Ratu Ebu")
 tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre-Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
-    uploaded_file = st.file_uploader("datadiabetes.xlsx", type="xlsx")
+    df = pd.read_excel("datadiabetes.xlsx")
 
-    if uploaded_file:
-        df = pd.read_excel(uploaded_file)
-
-        st.dataframe(df)
-        st.table(df)
+    st.dataframe(df)
+    st.table(df)
 
 with tab2:
    st.image("farid.png")
