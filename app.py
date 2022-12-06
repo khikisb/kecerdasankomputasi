@@ -78,7 +78,6 @@ with tab4:
             temp.append(i)
     
         databaru2 = [temp,temp1]
-        databaru2
         
         dataset_total = pd.concat((databaru2), axis=0)
         inputs = dataset_total[len(dataset_total)-len(df1) - 1:].values.reshape(-1,1)
