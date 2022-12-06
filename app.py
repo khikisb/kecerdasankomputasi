@@ -79,7 +79,9 @@ with tab4:
         # print(databaruu2)
         
         data1 = pd.DataFrame(databaruu)
+        data1
         data2 = pd.DataFrame(databaru2)
+        data2
         
         dataset_total = pd.concat((data1, data2), axis=0)
         inputs = dataset_total[len(dataset_total)-len(data2) - timesteps:].values.reshape(-1,1)
