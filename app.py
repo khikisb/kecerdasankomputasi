@@ -102,3 +102,19 @@ with tab4:
 
         st.title("Jumlah Banyaknya Data")
         inputs.shape
+        
+        X_test = []
+        for i in range(timesteps, 51):
+            X_test.append(inputs[i-timesteps:i,0])
+            X_test = np.array(X_test)
+            X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
+            predicted_umur = regressor.predict(X_test)
+            predicted_umur = scaler.inverse_transform(predicted_umur)
+            
+         plt.plot(train, color='red', label='Umur Pasien Asli')
+         plt.plot(predicted_umur, color='blue', label='Umur Prediksi Pasien')
+         plt.title('Prediksi Umur Pasien')
+         plt.xlabel('Jumlah Pasien')
+         plt.ylabel('Umur Pasien')
+         plt.legend()
+         plt.show()
