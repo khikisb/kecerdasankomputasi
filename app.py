@@ -36,7 +36,7 @@ with tab2:
     
     st.title("Grafik dari MinMaxScaler Fitur Usia")
     fig, ax = plt.subplots()
-    ax.hist(train_scaled, bins=20)
+    ax.hist(train_scaled, bins=50)
     st.pyplot(fig)
 
     
