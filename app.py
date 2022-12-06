@@ -61,7 +61,7 @@ with tab4:
         
         temp1=[]
         for i in df1['Usia']:
-            temp1.append(i)
+            temp.append(i)
     
         databaru2 = [temp,temp1]
         databaru2
