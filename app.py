@@ -23,7 +23,8 @@ with tab1:
     st.table(df)
 
 with tab2:
-   st.image("farid.png")
+    train = df.loc[:, ['Usia']].values 
+    train
     
 with tab3:
    st.image("firza.png")
