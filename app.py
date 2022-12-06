@@ -49,3 +49,5 @@ with tab4:
         #read csv
         df_selected_team1 = pd.read_excel(uploaded_file)
         df1 = df_selected_team1.astype(str)
+    
+        st.table(df1)
