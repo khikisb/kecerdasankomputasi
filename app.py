@@ -35,7 +35,7 @@ with tab2:
     train_scaled
     
     st.title("Grafik dari MinMaxScaler Fitur Usia")
-    fig, ax = plt.subplots(train_scaled)
+    fig, ax = plt.subplots(train)
     # ...
     st.pyplot(fig)
     
