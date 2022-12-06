@@ -4,7 +4,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-model = load_model("modeltf.hdf5")
+# load the model from disk
+model = pickle.load(open('modeltf.hdf5', 'rb'))
 
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
