@@ -157,5 +157,5 @@ with tab4:
         for i in predicted_umur:
             temp = i[0]
             hasil += temp
-
-        print("Rata rata Umur Pasien : ", int(hasil/len(predicted_umur)), "Tahun")
+        ratarataumur = int(hasil/len(predicted_umur))
+        ratarataumur
