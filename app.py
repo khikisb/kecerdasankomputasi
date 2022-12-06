@@ -42,7 +42,7 @@ with tab2:
 
     
 with tab3:
-   st.image("firza.png")
+   st.image("tabsmodeling.png")
 
 with tab4:
     uploaded_file = st.file_uploader("Masukkan Data Pasien")
