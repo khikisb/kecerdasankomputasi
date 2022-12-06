@@ -3,6 +3,33 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
+#Initialize RNN:
+regressor = Sequential()
+#Adding the first RNN layer and some Dropout regularization
+regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True, input_shape= (X_train.shape[1],1)))
+regressor.add(Dropout(0.2))
+
+#Adding the second RNN layer and some Dropout regularization
+regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True))
+regressor.add(Dropout(0.2))
+
+#Adding the third RNN layer and some Dropout regularization
+regressor.add(SimpleRNN(units = 10, activation='tanh', return_sequences=True))
+regressor.add(Dropout(0.2))
+
+#Adding the fourth RNN layer and some Dropout regularization
+regressor.add(SimpleRNN(units = 10))
+regressor.add(Dropout(0.2))
+
+#Adding the output layer
+regressor.add(Dense(units = 1))
+
+#Compile the RNN
+regressor.compile(optimizer='adam', loss='mean_squared_error')
+
+#Fitting the RNN to the Training set
+regressor.fit(X_train, y_train, epochs=100, batch_size=32)
+
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
     page_icon="👋",
