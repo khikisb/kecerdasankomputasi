@@ -158,5 +158,4 @@ with tab4:
             temp = i[0]
             hasil += temp
         ratarataumur = int(hasil/len(predicted_umur))
-        ratarataumur
-        st.write("Tahun")
+        st.success(f'{ratarataumur} Tahun')
