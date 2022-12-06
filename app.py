@@ -23,8 +23,14 @@ with tab1:
     st.table(df)
 
 with tab2:
+    st.title("Seleksi Fitur Usia Dari Data")
     train = df.loc[:, ['Usia']].values 
     train
+    
+    from sklearn.preprocessing import MinMaxScaler
+    scaler = MinMaxScaler(feature_range = (0, 1))
+    train_scaled = scaler.fit_transform(train)
+    train_scaled
     
 with tab3:
    st.image("firza.png")
