@@ -81,7 +81,7 @@ with tab4:
         databaru2 = [temp]
         databaru2
         
-        dataset_total = pd.concat([databaru2], axis=0)
+        dataset_total = pd.concat(([databaru2]), axis=0)
         inputs = dataset_total[len(dataset_total)-len(df1) - timesteps:].values.reshape(-1,1)
         inputs = scaler.transform(inputs) #minmax scaler
         inputs
