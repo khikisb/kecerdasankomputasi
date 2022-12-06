@@ -2,11 +2,6 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense, Embedding, LSTM, GRU, Flatten, Dropout, Lambda
-from keras.layers.embeddings import Embedding
-
-import tensorflow as tf
 
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
