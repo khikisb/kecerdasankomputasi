@@ -18,6 +18,7 @@ st.title("Prediksi Jumlah Pasien Penyakit Dalam Di RSUD Syarifah Ambami Ratu Ebu
 tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre-Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
+    from openpyxl import Workbook
     df_selected_team = pd.read_excel("datadiabetes.xlsx", engine='openpyxl')
     df = df_selected_team.astype(str)
 
