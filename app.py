@@ -17,7 +17,8 @@ st.title("Prediksi Jumlah Pasien Diabetes Di RSUD Syarifah Ambami Ratu Ebu")
 tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre-Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
-    df = pd.read_excel("datadiabetes.xlsx")
+    df_selected_team = pd.read_excel("datadiabetes.xlsx")
+    df = df_selected_team.astype(str)
 
     st.dataframe(df)
     st.table(df)
