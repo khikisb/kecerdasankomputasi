@@ -56,13 +56,6 @@ with tab4:
         scaler = MinMaxScaler(feature_range = (0, 1))
         train_scaled = scaler.fit_transform(train)
         
-        
-        #read csv
-        df_selected_team1 = pd.read_excel(uploaded_file)
-        data_baru = df_selected_team1.astype(str)
-    
-        st.table(data_baru)
-        
         X_train = []
         y_train = []
         timesteps = 1
@@ -75,6 +68,13 @@ with tab4:
         
         #Reshaping:
         X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
+        
+        
+        #read csv Data 2
+        df_selected_team1 = pd.read_excel(uploaded_file)
+        data_baru = df_selected_team1.astype(str)
+    
+        st.table(data_baru)
         
         st.title("Pre Processing Fitur Usia dengan MinMaxScaler")
         
