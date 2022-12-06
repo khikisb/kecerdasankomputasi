@@ -99,3 +99,6 @@ with tab4:
         inputs = dataset_total[len(dataset_total)-len(df2) - timesteps:].values.reshape(-1,1)
         inputs = scaler.transform(inputs) #minmax scaler
         inputs
+
+        st.title("Jumlah Banyaknya Data")
+        inputs.shape
