@@ -68,12 +68,13 @@ with tab4:
         
         st.title("Pre Processing Fitur Usia ddengan MinMaxScaler")
         databaruu = [df1]
-
+        
+        # Data Lama
         temp=[]
         for h in df['Usia']:
             temp.append(h)
             
-        temp1=[] 
+        # Data Baru    
         for h in df1['Usia']:
             temp.append(h)  
             
