@@ -20,7 +20,6 @@ with tab1:
     df_selected_team = pd.read_excel("datadiabetes.xlsx")
     df = df_selected_team.astype(str)
 
-    st.dataframe(df)
     st.table(df)
 
 with tab2:
