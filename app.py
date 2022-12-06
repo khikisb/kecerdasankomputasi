@@ -87,8 +87,3 @@ with tab4:
 
         databaruu2 = [temp]
         # print(databaruu2)
-        
-        df1 = pd.DataFrame(databaruu)
-        df1
-        df2 = pd.DataFrame(databaruu2)
-        df2
