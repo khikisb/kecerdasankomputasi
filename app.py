@@ -44,8 +44,6 @@ with tab3:
    st.image("tabsmodeling.png")
 
 with tab4:
-    model = tf.keras.models.load_model("modeltf.hdf5")
-  
     uploaded_file = st.file_uploader("Masukkan Data Pasien")
     if uploaded_file is not None:
         df_selected_team = pd.read_excel("datadiabetes.xlsx")
