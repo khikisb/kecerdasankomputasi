@@ -17,7 +17,8 @@ st.title("Prediksi Jumlah Pasien Diabetes Di RSUD Syarifah Ambami Ratu Ebu")
 tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre-Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
-   st.image("sahrul.png")
+   df = pd.read_excel("datadiabetes.xlsx")
+   df.head(5)
 
 with tab2:
    st.image("farid.png")
