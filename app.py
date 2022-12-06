@@ -27,6 +27,7 @@ with tab2:
     train = df.loc[:, ['Usia']].values 
     train
     
+    st.title("Pre Processing Fitur Usia dengan MinMaxScaler")
     from sklearn.preprocessing import MinMaxScaler
     scaler = MinMaxScaler(feature_range = (0, 1))
     train_scaled = scaler.fit_transform(train)
