@@ -3,15 +3,6 @@ import pickle
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
-import tensorflow as tf
-
-from tensorflow.keras.models import load_model
-
-@st.cache(allow_output_mutation=True)
-def load_models():
-    model_eval = load_model("modeltf.hdf5", compile=False)
-    model_auto = load_model("modeltf.hdf5", compile=False)
-    return model_eval, model_aut
 
 st.set_page_config(
     page_title="Prediksi Jumlah Pasien",
