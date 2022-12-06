@@ -7,3 +7,4 @@ scikit-learn
 xlrd==1.2.0 
 plotly_express==0.4.0
 keras==2.1.3
+tensorflow==2.4.0
