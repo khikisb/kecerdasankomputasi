@@ -141,3 +141,6 @@ with tab4:
         X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
         predicted_umur = regressor.predict(X_test)
         predicted_umur = scaler.inverse_transform(predicted_umur)
+        
+        st.title("Jumlah Pasien Yang Di Prediksi")
+        predicted_umur.shape
