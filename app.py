@@ -44,7 +44,7 @@ with tab3:
    st.image("firza.png")
 
 with tab4:
-    uploaded_file = st.file_uploader(“Masukkan Data Pasien”)
+    uploaded_file = st.file_uploader("Masukkan Data Pasien")
     if uploaded_file is not None:
         #read csv
         df_selected_team1 = pd.read_excel(uploaded_file)
