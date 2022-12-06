@@ -14,4 +14,16 @@ st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 st.title("Prediksi Jumlah Pasien Diabetes Di RSUD Syarifah Ambami Ratu Ebu")
 
     
-st.header('Jawablah Semua Pertanyaan Berikut :')
+tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre-Processing", "Tab Modeling", "Tab Implementasi"])
+
+with tab1:
+   st.image("sahrul.png")
+
+with tab2:
+   st.image("farid.png")
+    
+with tab3:
+   st.image("firza.png")
+
+with tab4:
+   st.image("firza.png")
