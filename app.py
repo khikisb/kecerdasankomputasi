@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 st.set_page_config(
-    page_title="Prediksi Jumlah Pasien",
+    page_title="Prediksi Diabetes",
     page_icon="👋",
 )
 
@@ -12,14 +12,14 @@ st.title("")
 st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 
 
-st.title("Prediksi Jumlah Pasien Penyakit Dalam Di RSUD Syarifah Ambami Ratu Ebu")
+st.title("Prediksi Diabets")
 
     
 tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre-Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
     from openpyxl import Workbook
-    df_selected_team = pd.read_excel("datadiabetes.xlsx", engine='openpyxl')
+    df_selected_team = pd.read_excel("diabetes.csv", engine='openpyxl')
     df = df_selected_team.astype(str)
 
     st.table(df)
