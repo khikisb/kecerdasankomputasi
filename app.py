@@ -59,8 +59,8 @@ with tab4:
 
     DiabetesPedigreeFunction = st.slider('DiabetesPedigreeFunction ?', 0.78, 2.42)
     
-    age = st.slider('Berapa umur anda ?', 0, 81, 25)
-    st.write("I'm ", age, 'years old')
+    Age = st.slider('Berapa umur anda ?', 0, 81, 25)
+    st.write("I'm ", Age, 'years old')
 
     if st.button('Prediksi'):
         prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
