@@ -63,8 +63,8 @@ with tab4:
     if st.button('Prediksi'):
         prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
         if prediksi == 0:
-            prediksi == "Tidak Diabetes"
-            st.success(f'Tingkat Kesadaran Pelecehan Seksual Terhadap Anak, yaitu {prediksi}')
+            prediksi1 == "Tidak Diabetes"
+            st.success(f'Tingkat Kesadaran Pelecehan Seksual Terhadap Anak, yaitu {prediksi1}')
         elif prediksi == 1:
-            prediksi == "Diabetes"
-            st.success(f'Tingkat Kesadaran Pelecehan Seksual Terhadap Anak, yaitu {prediksi}')
+            prediksi2 == "Diabetes"
+            st.success(f'Tingkat Kesadaran Pelecehan Seksual Terhadap Anak, yaitu {prediksi2}')
