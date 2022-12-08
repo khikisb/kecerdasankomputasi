@@ -35,47 +35,10 @@ with tab4:
     st.write("Salahh bro")
 
     # Define the prediction function
-    def predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age, New_Glucose_Class_Prediabetes, New_BMI_Range_Healty, New_BMI_Range_Overweight, New_BMI_Range_Obese ,New_BloodPressure_HS1, New_BloodPressure_HS2, New_SkinThickness_1):
+    def predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age):
         
         #Predicting
-
-        if New_Glucose_Class_Prediabetes == 'Iya Tentu':
-            New_Glucose_Class_Prediabetes = 1
-        elif New_Glucose_Class_Prediabetes == 'Tidak':
-            New_Glucose_Class_Prediabetes = 0
-            
-        if New_BMI_Range_Healty == 'Iya Tentu':
-            New_BMI_Range_Healty = 1
-        elif New_BMI_Range_Healty == 'Tidak':
-            New_BMI_Range_Healty = 0
-        
-        if New_BMI_Range_Overweight == 'Iya Tentu':
-            New_BMI_Range_Overweight = 1
-        elif New_BMI_Range_Overweight == 'Tidak':
-            New_BMI_Range_Overweight = 0       
-        
-        if New_BMI_Range_Obese == 'Iya Tentu':
-            New_BMI_Range_Obese = 1
-        elif New_BMI_Range_Obese == 'Tidak':
-            New_BMI_Range_Obese = 0  
-            
-        if New_BloodPressure_HS1 == 'Iya Tentu':
-            New_BloodPressure_HS1 = 1
-        elif New_BloodPressure_HS1 == 'Tidak':
-            New_BloodPressure_HS1 = 0               
-            
-        if New_BloodPressure_HS2 == 'Iya Tentu':
-            New_BloodPressure_HS2 = 1
-        elif New_BloodPressure_HS2 == 'Tidak':
-            New_BloodPressure_HS2 = 0    
- 
-        if New_SkinThickness_1 == 'Iya Tentu':
-            New_SkinThickness_1 = 1
-        elif New_SkinThickness_1 == 'Tidak':
-            New_SkinThickness_1 = 0 
-            
-        
-        prediction = model.predict(pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age, New_Glucose_Class_Prediabetes, New_BMI_Range_Healty, New_BMI_Range_Overweight, New_BMI_Range_Obese ,New_BloodPressure_HS1, New_BloodPressure_HS2, New_SkinThickness_1]], columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'New_Glucose_Class_Prediabetes', 'New_BMI_Range_Healty', 'New_BMI_Range_Overweight', 'New_BMI_Range_Obese' ,'New_BloodPressure_HS1', 'New_BloodPressure_HS2', 'New_SkinThickness_1']))
+        prediction = model.predict(pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]], columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']))
         return prediction
 
 with tab4:
@@ -97,20 +60,6 @@ with tab4:
     
     Age = st.slider('Berapa umur anda ?', 0, 81, 25)
 
-    New_Glucose_Class_Prediabetes = st.selectbox('New_Glucose_Class_Prediabetes', ['Iya Tentu', 'Tidak'])
-    
-    New_BMI_Range_Healty = st.selectbox('New_BMI_Range_Healty', ['Iya Tentu', 'Tidak'])
-    
-    New_BMI_Range_Overweight = st.selectbox('New_BMI_Range_Overweight', ['Iya Tentu', 'Tidak'])
-    
-    New_BMI_Range_Obese = st.selectbox('New_BMI_Range_Obese', ['Iya Tentu', 'Tidak'])
-    
-    New_BloodPressure_HS1 = st.selectbox('New_BloodPressure_HS1', ['Iya Tentu', 'Tidak'])
-    
-    New_BloodPressure_HS2 = st.selectbox('New_BloodPressure_HS2', ['Iya Tentu', 'Tidak'])
-    
-    New_SkinThickness_1 = st.selectbox('New_SkinThickness_1', ['Iya Tentu', 'Tidak'])
-    
     if st.button('Prediksi'):
-        prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age, New_Glucose_Class_Prediabetes, New_BMI_Range_Healty, New_BMI_Range_Overweight, New_BMI_Range_Obese ,New_BloodPressure_HS1, New_BloodPressure_HS2, New_SkinThickness_1)
+        prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
         st.success(f'Tingkat Kesadaran Pelecehan Seksual Terhadap Anak, yaitu {prediksi}')
