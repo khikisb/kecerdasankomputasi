@@ -44,17 +44,17 @@ with tab4:
 with tab4:
     st.header('Jawablah Semua Pertanyaan Berikut :')
     
-    Pregnancies = st.slider('Pregnancies ?', 0, 17, 25)
+    Pregnancies = st.slider('Pregnancies ?', 0, 17, 1)
     
-    Glucose= st.slider('Glucose ?', 0, 199, 25)
+    Glucose= st.slider('Glucose ?', 0, 199, 1)
     
-    BloodPressure = st.slider('BloodPressure ?', 0, 122, 25)
+    BloodPressure = st.slider('BloodPressure ?', 0, 122, 1)
     
-    SkinThickness = st.slider('SkinThickness ?', 0, 99, 25)
+    SkinThickness = st.slider('SkinThickness ?', 0, 99, 1)
     
-    Insulin = st.slider('Insulin ?', 0, 846, 25)
+    Insulin = st.slider('Insulin ?', 0, 846, 1)
     
-    BMI = st.slider('BMI ?', 0.0 , 67.10)
+    BMI = st.slider('BMI ?', 0.000 , 67.10)
 
     DiabetesPedigreeFunction = st.slider('DiabetesPedigreeFunction ?', 0.078, 2.42)
     
