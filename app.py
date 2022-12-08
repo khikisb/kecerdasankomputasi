@@ -64,7 +64,7 @@ with tab4:
         prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
         if prediksi == 0:
             prediksi == "Tidak Diabetes"
-            st.success('Anda di Prediksi', prediksi)
+            st.success(f'Tingkat Kesadaran Pelecehan Seksual Terhadap Anak, yaitu {prediksi}')
         elif prediksi == 1:
             prediksi == "Diabetes"
-            st.success('Anda di Prediksi', prediksi)
+            st.success(f'Tingkat Kesadaran Pelecehan Seksual Terhadap Anak, yaitu {prediksi}')
