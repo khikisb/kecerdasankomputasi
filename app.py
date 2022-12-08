@@ -45,19 +45,19 @@ with tab4:
 with tab4:
     st.header('Jawablah Semua Pertanyaan Berikut :')
     
-    Pregnancies = st.slider('Berapa umur anda ?', 0, 81, 25)
+    Pregnancies = st.slider('Pregnancies ?', 0, 17, 25)
     
-    Glucose= st.slider('Berapa umur anda ?', 0, 81, 25)
+    Glucose= st.slider('Glucose ?', 0, 199, 25)
     
-    BloodPressure = st.slider('Berapa umur anda ?', 0, 81, 25)
+    BloodPressure = st.slider('BloodPressure ?', 0, 122, 25)
     
-    SkinThickness = st.slider('Berapa umur anda ?', 0, 81, 25)
+    SkinThickness = st.slider('SkinThickness ?', 0, 99, 25)
     
-    Insulin = st.slider('Berapa umur anda ?', 0, 81, 25)
+    Insulin = st.slider('Insulin ?', 0, 846, 25)
     
-    BMI = st.slider('Berapa umur anda ?', 0, 81, 25)
+    BMI = st.slider('BMI ?', 0, 67, 25)
 
-    DiabetesPedigreeFunction = st.slider('Berapa umur anda ?', 0, 81, 25)
+    DiabetesPedigreeFunction = st.slider('DiabetesPedigreeFunction ?', 0.078, 2.42, 25)
     
     age = st.slider('Berapa umur anda ?', 0, 81, 25)
     st.write("I'm ", age, 'years old')
