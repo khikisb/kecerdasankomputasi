@@ -42,7 +42,7 @@ with tab2:
 
     
 with tab3:
-   st.image("tabsmodeling.png")
+    st.write("Salahh bro")
 
 with tab4:
     st.write("Salahh bro")
