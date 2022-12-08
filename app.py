@@ -56,7 +56,7 @@ with tab4:
     
     BMI = st.slider('BMI ?', 0, 67, 25)
 
-    DiabetesPedigreeFunction = st.slider('DiabetesPedigreeFunction ?', 0.78, 2.42)
+    DiabetesPedigreeFunction = st.slider('DiabetesPedigreeFunction ?', 0.078, 2.42)
     
     Age = st.slider('Berapa umur anda ?', 0, 81, 25)
 
