@@ -62,11 +62,9 @@ with tab4:
 
     if st.button('Prediksi'):
         prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
-        prediksi1 = ""
-        prediksi2 = ""
         if prediksi == 0:
-            prediksi1 == "Tidak Diabetes"
-            st.success('Anda di Prediksi', prediksi1)
+            prediksi == "Tidak Diabetes"
+            st.success('Anda di Prediksi', prediksi)
         elif prediksi == 1:
-            prediksi2 == "Diabetes"
-            st.success('Anda di Prediksi', prediksi2)
+            prediksi == "Diabetes"
+            st.success('Anda di Prediksi', prediksi)
