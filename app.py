@@ -23,20 +23,9 @@ with tab1:
     st.table(df)
 
 with tab2:
-    st.title("Seleksi Fitur Usia Dari Data")
-    train = df.loc[:, ['Usia']].values 
-    train
-    
-    st.title("Pre Processing Fitur Usia dengan MinMaxScaler")
-    from sklearn.preprocessing import MinMaxScaler
-    scaler = MinMaxScaler(feature_range = (0, 1))
-    train_scaled = scaler.fit_transform(train)
-    train_scaled
-    
-    st.title("Grafik dari MinMaxScaler Fitur Usia")
-    fig, ax = plt.subplots()
-    ax.hist(train_scaled, bins=50)
-    st.pyplot(fig)
+    st.title("Pre-Processing")
+    #Observation units for variables with a minimum value of zero are NaN, except for the pregnancy variable.
+    df.describe([0.05,0.25,0.50,0.75,0.90,0.95,0.99]).T
 
     
 with tab3:
