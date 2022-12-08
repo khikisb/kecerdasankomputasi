@@ -54,7 +54,7 @@ with tab4:
     
     Insulin = st.slider('Insulin ?', 0, 846, 25)
     
-    BMI = st.slider('BMI ?', 0, 67, 25)
+    BMI = st.slider('BMI ?', 0.0 , 67.10)
 
     DiabetesPedigreeFunction = st.slider('DiabetesPedigreeFunction ?', 0.078, 2.42)
     
