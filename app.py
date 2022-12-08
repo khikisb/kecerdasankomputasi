@@ -35,7 +35,7 @@ with tab2:
      
     # now we can see missing values
     st.write("Missing Value")
-    df.isnull().sum()
+    st.image("MissingValue.png")
 
     
 with tab3:
