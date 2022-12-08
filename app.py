@@ -18,9 +18,7 @@ st.title("Prediksi Diabets")
 tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre-Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
-    from openpyxl import Workbook
-    df_selected_team = pd.read_excel("diabetes.csv", engine='openpyxl')
-    df = df_selected_team.astype(str)
+    df =pd.read_csv("diabetes.csv")
 
     st.table(df)
 
