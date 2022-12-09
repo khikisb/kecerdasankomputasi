@@ -69,6 +69,8 @@ with tab4:
         if prediksi == 1:
             prediksi1 = "Diabetes"
             st.success(f'Anda Di Prediksi {prediksi1}')
+            st.success(f'Anda Di Prediksi 1{prediksi}')
         else:
             prediksi2 = "Tidak Diabetes"
             st.success(f'Anda Di Prediksi {prediksi2}')
+            st.success(f'Anda Di Prediksi 2{prediksi}')
