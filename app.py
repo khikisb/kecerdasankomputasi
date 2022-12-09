@@ -36,13 +36,13 @@ with tab4:
 
     # Define the prediction function
     def predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age):
-        if predict == 0:
-            predict = 1
-        else:
-            predict = 0
         
         #Predicting
         prediction = model.predict(pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]], columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']))
+        if prediction == 0:
+            prediction = 1
+        else:
+            prediction = 0
         return prediction
 
 with tab4:
