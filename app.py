@@ -39,11 +39,6 @@ with tab4:
         
         #Predicting
         prediction = model.predict(pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]], columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']))
-        if prediction == 0:
-            prediction = 1
-        else:
-            prediction = 0
-        return prediction
 
 with tab4:
     st.header('Jawablah Semua Pertanyaan Berikut :')
@@ -69,7 +64,7 @@ with tab4:
         if prediksi == 1:
             prediksi1 = "Diabetes"
             st.success(f'Anda Di Prediksi {prediksi1}')
-            st.success(f'Anda Di Prediksi 1{prediksi}')
+            st.success(f'Anda Di Prediksi (1){prediksi}')
         else:
             prediksi2 = "Tidak Diabetes"
             st.success(f'Anda Di Prediksi {prediksi2}')
