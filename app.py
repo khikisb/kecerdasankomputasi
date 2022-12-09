@@ -36,13 +36,16 @@ with tab4:
 
     # Define the prediction function
     def predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age):
-        if predict == 1:
-            predict = "Diabetes"
-        elif predict == 0:
-            predict = "Tidak Diabetes"
         
         #Predicting
         prediction = model.predict(pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]], columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']))
+        
+        if prediction == 1:
+            prediction = "Diabetes"
+        elif prediction == 0:
+            prediction = "Tidak Diabetes"
+            
+        return prediction
 
 with tab4:
     st.header('Jawablah Semua Pertanyaan Berikut :')
