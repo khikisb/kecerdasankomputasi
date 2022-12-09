@@ -36,6 +36,10 @@ with tab4:
 
     # Define the prediction function
     def predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age):
+        if predict == 0:
+            predict = 1
+        else:
+            predict = 0
         
         #Predicting
         prediction = model.predict(pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]], columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']))
@@ -46,26 +50,20 @@ with tab4:
     
     Pregnancies = st.slider('Pregnancies ?', 0, 17, 1)
     
-    Glucose= st.slider('Glucose ?', 0, 199, 1)
+    Glucose= st.slider('Berapa tingkat Glukosa dalam darah anda ?', 0, 199, 1)
     
-    BloodPressure = st.slider('BloodPressure ?', 0, 122, 1)
+    BloodPressure = st.slider('Berapa tekanan darah anda ?', 0, 122, 1)
     
-    SkinThickness = st.slider('SkinThickness ?', 0, 99, 1)
+    SkinThickness = st.slider('Berapa ketebalan kulit anda ?', 0, 99, 1)
     
-    Insulin = st.slider('Insulin ?', 0, 846, 1)
+    Insulin = st.slider('Berapa tingkat insulin pada darah anda ?', 0, 846, 1)
     
-    BMI = st.slider('BMI ?', 0.000 , 67.10)
+    BMI = st.slider('Masukkan indeks tubuh anda ?', 0.000 , 67.10)
 
-    DiabetesPedigreeFunction = st.slider('DiabetesPedigreeFunction ?', 0.078, 2.42)
+    DiabetesPedigreeFunction = st.slider('Berapa presentase diabetes anda ?', 0.078, 2.42)
     
     Age = st.slider('Berapa umur anda ?', 0, 81, 25)
 
     if st.button('Prediksi'):
         prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
         st.success(f'Anda Di Prediksi {prediksi}')
-        if prediksi == 0:
-            prediksi1 = "Diabetes"
-            st.success(f'Anda Di Prediksi {prediksi1}')
-        else:
-            prediksi2 = "Tidak Diabetes"
-            st.success(f'Anda Di Prediksi {prediksi2}')
