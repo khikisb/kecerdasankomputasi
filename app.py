@@ -36,6 +36,10 @@ with tab4:
 
     # Define the prediction function
     def predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age):
+        if predict == 1:
+            predict = "Diabetes"
+        elif predict == 0:
+            predict = "Tidak Diabetes"
         
         #Predicting
         prediction = model.predict(pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]], columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']))
@@ -61,9 +65,6 @@ with tab4:
 
     if st.button('Prediksi'):
         prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
-        if prediksi == 1:
-            prediksi1 = "Diabetes"
-            st.success(f'Anda Di Prediksi {prediksi1}')
-        elif prediksi == 0:
-            prediksi2 = "Tidak Diabetes"
-            st.success(f'Anda Di Prediksi {prediksi2}')
+        st.success(f'Anda Di Prediksi {prediksi}')
+        
+
