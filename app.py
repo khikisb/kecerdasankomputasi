@@ -31,9 +31,9 @@ with tab1:
         #Predicting
         prediction = model.predict(pd.DataFrame([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]], columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']))
         
-        if prediction == 0:
+        if prediction == 1:
             prediction = "Diabetes"
-        elif prediction == 1:
+        elif prediction == 0:
             prediction = "Tidak Diabetes"
             
         return prediction
