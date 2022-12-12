@@ -24,9 +24,6 @@ with tab1:
     df =pd.read_csv("diabetes.csv")
 
     st.table(df)
-    
-with tab2:
-    st.write("Salahh bro")
 
     # Define the prediction function
     def predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age):
@@ -41,7 +38,7 @@ with tab2:
             
         return prediction
 
-with tab4:
+with tab2:
     st.header('Jawablah Semua Pertanyaan Berikut :')
     
     Pregnancies = st.slider('Masukkan jumlah kehamilan anda ? (Pregnancies) ', 0, 17, 1)
