@@ -51,9 +51,9 @@ with tab2:
     
     Insulin = st.slider('Berapa tingkat insulin pada darah anda ? (Insulin)', 0, 846, 0)
     
-    BMI = st.slider('Masukkan indeks tubuh anda ? (BMI)', 0.000 , 33.07)
+    BMI = st.slider('Masukkan indeks tubuh anda ? (BMI)', 0.000 , 67.10, 33.07)
 
-    DiabetesPedigreeFunction = st.slider('Berapa presentase diabetes anda ? (DiabetesPedigreeFunction)', 0.078, 0.62)
+    DiabetesPedigreeFunction = st.slider('Berapa presentase diabetes anda ? (DiabetesPedigreeFunction)', 0.078, 2.42, 0.62)
     
     Age = st.slider('Berapa umur anda ? (Age)', 0, 81, 50)
 
