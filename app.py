@@ -41,21 +41,21 @@ with tab1:
 with tab2:
     st.header('Jawablah Semua Pertanyaan Berikut :')
     
-    Pregnancies = st.slider('Masukkan jumlah kehamilan anda ? (Pregnancies) ', 0, 17, 1)
+    Pregnancies = st.slider('Masukkan jumlah kehamilan anda ? (Pregnancies) ', 0, 17, 6)
     
-    Glucose= st.slider('Berapa tingkat Glukosa dalam darah anda ? (Glucose)', 0, 199, 1)
+    Glucose= st.slider('Berapa tingkat Glukosa dalam darah anda ? (Glucose)', 0, 199, 148)
     
-    BloodPressure = st.slider('Berapa tekanan darah anda ? (BloodPressure)', 0, 122, 1)
+    BloodPressure = st.slider('Berapa tekanan darah anda ? (BloodPressure)', 0, 122, 72)
     
-    SkinThickness = st.slider('Berapa ketebalan kulit anda ? (SkinThickness) ', 0, 99, 1)
+    SkinThickness = st.slider('Berapa ketebalan kulit anda ? (SkinThickness) ', 0, 99, 35)
     
-    Insulin = st.slider('Berapa tingkat insulin pada darah anda ? (Insulin)', 0, 846, 1)
+    Insulin = st.slider('Berapa tingkat insulin pada darah anda ? (Insulin)', 0, 846, 0)
     
-    BMI = st.slider('Masukkan indeks tubuh anda ? (BMI)', 0.000 , 67.10)
+    BMI = st.slider('Masukkan indeks tubuh anda ? (BMI)', 0.000 , 33.07)
 
-    DiabetesPedigreeFunction = st.slider('Berapa presentase diabetes anda ? (DiabetesPedigreeFunction)', 0.078, 2.42)
+    DiabetesPedigreeFunction = st.slider('Berapa presentase diabetes anda ? (DiabetesPedigreeFunction)', 0.078, 0.62)
     
-    Age = st.slider('Berapa umur anda ? (Age)', 0, 81, 25)
+    Age = st.slider('Berapa umur anda ? (Age)', 0, 81, 50)
 
     if st.button('Prediksi'):
         prediksi = predict(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
